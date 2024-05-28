@@ -20,9 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-slate-200">
         <Header />
-        {children}</body>
+        {children}
 
         <Footer />
+      </body>
     </html>
   );
 }
