@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <main className="relative isolate px-6 pt-14 lg:px-8">
@@ -37,6 +38,8 @@ export default function Home() {
         >
           Get Started
         </Link>
+
+        
       </div>
 
       <div
