@@ -17,7 +17,7 @@ export default function Home() {
         ></div>
       </div>
 
-      <div className="flex flex-col items-center justify-center space-y-5">
+      <div className="flex flex-col items-center justify-center space-y-9">
         <Image
           src="/Logo.png"
           alt="Study Buddy Logo"
