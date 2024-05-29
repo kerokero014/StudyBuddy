@@ -18,12 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-slate-200">
-        <Header />
-        {children}
-
-        <Footer />
-      </body>
+      <body className="bg-slate-400">{children}</body>
     </html>
   );
 }
