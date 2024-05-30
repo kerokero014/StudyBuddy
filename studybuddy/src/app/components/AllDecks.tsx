@@ -53,7 +53,7 @@ const DecksList = () => {
   }, []);
 
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-lg mx-auto rounded-xl">
       {loading ? (
         <p className="text-xl">Loading...</p>
       ) : error ? (
@@ -61,7 +61,7 @@ const DecksList = () => {
       ) : (
         <ul className="grid gap-4">
           {decks.map((deck) => (
-            <li key={deck.id} className="bg-gray-100 p-4 rounded-md">
+            <li key={deck.id} className="bg-slate-100 p-4 rounded-xl">
               <h2 className="text-xl font-semibold">{deck.title}</h2>
               <p className="text-gray-600">{deck.description}</p>
             </li>
