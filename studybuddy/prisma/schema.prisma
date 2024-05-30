@@ -20,7 +20,7 @@ model User {
   email     String   @unique
   password  String
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now()) @updatedAt
   decks     Deck[]
 }
 
@@ -30,7 +30,7 @@ model Deck {
   description String?
   userId      Int
   createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  updatedAt   DateTime    @default(now()) @updatedAt
   flashcards  Flashcard[]
   user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
@@ -41,6 +41,6 @@ model Flashcard {
   answer    String
   deckId    Int
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now()) @updatedAt
   deck      Deck     @relation(fields: [deckId], references: [id], onDelete: Cascade)
 }

@@ -14,8 +14,6 @@ const DecksList = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  console.log("DecksList rendered");
-
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);

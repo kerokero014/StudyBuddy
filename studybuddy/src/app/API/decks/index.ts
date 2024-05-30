@@ -8,6 +8,7 @@ export default async function handler(
   if (req.method === "GET") {
     const decks = await prisma.deck.findMany();
     res.status(200).json(decks);
+    console.log(decks);
   } else if (req.method === "POST") {
     const { title, description, userId } = req.body;
     const newDeck = await prisma.deck.create({
