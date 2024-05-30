@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Home() {
   return (
     <main className="relative isolate px-6 pt-14 lg:px-8">
@@ -20,11 +19,11 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center space-y-9">
         <Image
-          src="/Logo.png"
+          src="/Black_Book_Logo.png"
           alt="Study Buddy Logo"
           width={500}
           height={500}
-          className="mx-auto rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+          className="bg-slate-300 mx-auto rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         />
         <h1 className="text-4xl font-bold text-center text-slate-900">
           Welcome to Study Buddy
@@ -38,8 +37,6 @@ export default function Home() {
         >
           Get Started
         </Link>
-
-        
       </div>
 
       <div

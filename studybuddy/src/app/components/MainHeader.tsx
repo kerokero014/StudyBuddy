@@ -48,7 +48,7 @@ export default function MainHeader() {
                 href="#"
                 className="block px-2 py-1 rounded-md hover:bg-slate-600 hover:text-gray-300 transition"
               >
-                Decks/Courses
+                Decks
               </a>
             </li>
             <li>
