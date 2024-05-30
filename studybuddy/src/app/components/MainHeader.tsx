@@ -37,7 +37,7 @@ export default function MainHeader() {
           <ul className="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0">
             <li>
               <a
-                href="#"
+                href="/"
                 className="block px-2 py-1 rounded-md hover:bg-slate-600 hover:text-gray-300 transition"
               >
                 Home

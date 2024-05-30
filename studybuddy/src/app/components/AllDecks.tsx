@@ -12,18 +12,40 @@ type Deck = {
 const DecksList = () => {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  console.log("DecksList rendered");
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
-        const response = await fetch("/app/API/decks");
+        const response = await fetch("/API/decks", {
+          method: "GET",
+        });
         if (!response.ok) {
           throw new Error("Failed to fetch decks");
         }
         const data = await response.json();
-        setDecks(data);
+        if (
+          Array.isArray(data) &&
+          data.every(
+            (item) =>
+              typeof item.id === "number" &&
+              typeof item.title === "string" &&
+              typeof item.description === "string"
+          )
+        ) {
+          setDecks(data);
+        } else {
+          throw new Error("Invalid data format");
+        }
       } catch (error) {
-        setError("Error fetching decks. Please try again later.");
+        if (error instanceof Error) {
+          setError(error.message);
+        }
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -32,8 +54,10 @@ const DecksList = () => {
 
   return (
     <div className="max-w-lg mx-auto">
-      {error ? (
-        <p className="text-red-800">{error}</p>
+      {loading ? (
+        <p className="text-xl">Loading...</p>
+      ) : error ? (
+        <p className="text-red-800 text-2xl">{error}</p>
       ) : (
         <ul className="grid gap-4">
           {decks.map((deck) => (
