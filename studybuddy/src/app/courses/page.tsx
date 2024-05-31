@@ -1,7 +1,7 @@
 import Header from "../components/MainHeader";
 import Footer from "../components/MainFooter";
 import AllDecks from "../components/AllDecks";
-import CreateUser from "../components/createUser";
+import TestComponent from "../components/TestComponent";
 
 export default function Courses() {
   return (
@@ -15,9 +15,9 @@ export default function Courses() {
       </div> */}
 
       <div className="bg-slate-300 container mx-auto my-5">
-        <CreateUser />
+        <TestComponent />
       </div>
-
+      
       <Footer />
     </>
   );
