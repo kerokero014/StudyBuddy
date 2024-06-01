@@ -25,11 +25,11 @@ export default function Home() {
           height={500}
           className="bg-slate-300 mx-auto rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         />
-        <h1 className="text-4xl font-bold text-center text-slate-900">
+        <h1 className="text-4xl font-bold text-center text-white">
           Welcome to Study Buddy
         </h1>
-        <p className="text-2xl font-semibold text-center text-slate-800">
-          A place where you can find the best study materials for your courses.
+        <p className="text-2xl font-semibold text-center text-white">
+          Study smarter and learn better.
         </p>
         <Link
           href="/courses"
