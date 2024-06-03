@@ -14,10 +14,6 @@ export default function Courses() {
         <AllDecks />
       </div> */}
 
-      <div className="bg-slate-300 container mx-auto my-5">
-        <TestComponent />
-      </div>
-      
       <Footer />
     </>
   );
